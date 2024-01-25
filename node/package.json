@@ -1,0 +1,24 @@
+{
+  "name": "mysendingbox-test-node-app",
+  "version": "0.0.1",
+  "description": "Test app for mysendingbox node wrapper",
+  "author": "baptiste COURGIBET",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./build && tsc",
+    "prestart": "rm -rf ./node_modules package-lock.json && npm i && npm run build",
+    "test:accounts": "node ./build/accounts.js",
+    "test:invoices": "node ./build/invoices.js",
+    "test:letters": "node ./build/letters.js",
+    "test:postcards": "node ./build/postcards.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "mysendingbox":"~/amiltone/web-factory/msb/wrappers/node/mysendingbox-1.0.0.tgz",
+    "ts-pattern": "^5.0.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.6",
+    "typescript": "^5.3.3"
+  }
+}
