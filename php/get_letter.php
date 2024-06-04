@@ -4,7 +4,7 @@ use Mysendingbox\MysendingboxClient;
 
 $apiKey = 'YOUR_API_KEY';
 
-$mysendingbox = new MysendingboxClient($apiKey, null, 'https://mysendingbox-api-uat.amiltone.com/api/');
+$mysendingbox = new MysendingboxClient($apiKey);
 
 $letterId = 'LETTER_ID';
 

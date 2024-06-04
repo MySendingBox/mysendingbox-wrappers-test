@@ -6,7 +6,7 @@ use Mysendingbox\Model\AddressElectronic;
 
 $apiKey = 'YOUR_API_KEY';
 
-$mysendingbox = new MysendingboxClient($apiKey, null, 'https://mysendingbox-api-uat.amiltone.com/api/');
+$mysendingbox = new MysendingboxClient($apiKey);
 
 // final class AddressElectronic 
 // public function __construct(
