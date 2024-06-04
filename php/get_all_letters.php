@@ -8,12 +8,9 @@ $apiKey = 'API_KEY';
 
 $mysendingbox = new MysendingboxClient($apiKey);
 
-$letters = $mysendingbox->getAllLetters(
-    ['limit' => 25,
-    'created_at' => '2024-03-01',
-]);
+$letters = $mysendingbox->getAllLetters(['limit' => 25]);
 
-
+echo ('<pre>');
 print_r($letters);
-
+echo ('</pre>');
 ?>

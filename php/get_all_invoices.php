@@ -8,8 +8,9 @@ $apiKey = 'API_KEY';
 
 $mysendingbox = new MysendingboxClient($apiKey);
 
-$invoices = $mysendingbox->getAllInvoices(['limit' => 25, 'created_at' => '2024-03-01']);
+$invoices = $mysendingbox->getAllInvoices(['limit' => 25]);
 
+echo ('<pre>');
 print_r($invoices);
-
+echo ('</pre>');
 ?>

@@ -8,7 +8,7 @@ $apiKey = 'API_KEY';
 
 $mysendingbox = new MysendingboxClient($apiKey);
 
-$letterId = 'LETTER_ID';
+$letterId = 'LETTER_ID'; // Replace 'LETTER_ID' with the ID of the letter you want to retrieve
 
 $letter = $mysendingbox->getLetter($letterId);
 
