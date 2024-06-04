@@ -4,9 +4,7 @@ require 'config.php';
 
 use Mysendingbox\MysendingboxClient;
 
-$apiKey = 'API_KEY';
-
-$mysendingbox = new MysendingboxClient($apiKey);
+$mysendingbox = new MysendingboxClient(API_KEY);
 
 $letterId = 'LETTER_ID'; // Replace 'LETTER_ID' with the ID of the letter you want to retrieve
 

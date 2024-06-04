@@ -4,9 +4,7 @@ require 'config.php';
 
 use Mysendingbox\MysendingboxClient;
 
-$apiKey = 'API_KEY';
-
-$mysendingbox = new MysendingboxClient($apiKey);
+$mysendingbox = new MysendingboxClient(API_KEY);
 
 $invoiceId = 'INVOICE_ID'; // Replace 'INVOICE_ID' with the ID of the invoice you want to retrieve
 

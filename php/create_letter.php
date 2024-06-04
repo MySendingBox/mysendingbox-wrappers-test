@@ -5,9 +5,7 @@ require 'config.php';
 use Mysendingbox\MysendingboxClient;
 use Mysendingbox\Model\AddressPaper;
 
-$apiKey = 'API_KEY';
-
-$mysendingbox = new MysendingboxClient($apiKey);
+$mysendingbox = new MysendingboxClient(API_KEY);
 
 // final class AddressPaper 
 // public function __construct(
