@@ -6,7 +6,9 @@ $apiKey = 'YOUR_API_KEY';
 
 $mysendingbox = new MysendingboxClient($apiKey);
 
-$isCanceled = $mysendingbox->cancelLetter('OWedf3aIqySgQKPmpLd7u');
+$letterId = 'LETTER_ID';
+
+$isCanceled = $mysendingbox->cancelLetter($letterId);
 
 var_dump($isCanceled);
 
