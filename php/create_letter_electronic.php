@@ -67,5 +67,7 @@ $letter = $mysendingbox->createElectronicLetter(
     'Please review the attached documents', // $content (optional)
 );
 
+echo('<pre>');
 var_dump($letter);
+echo('</pre>');
 ?>

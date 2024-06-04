@@ -78,7 +78,8 @@ $from_address = new AddressPaper(
   
   );
   
+  echo('<pre>');
   print_r($letter);
-  
+  echo('</pre>');
   ?>
 

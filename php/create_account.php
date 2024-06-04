@@ -22,7 +22,7 @@ $mysendingbox = new MysendingboxClient($apiKey);
 // )
 
 $account_response = $mysendingbox->createAccount(
-    'user2@example.com', // $email
+    'john.doe@example.com', // $email
     'John Doe', // $name
     '+336666666', // $phone
     null, // $webhookUrl (optional)
