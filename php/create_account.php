@@ -1,8 +1,10 @@
 <?php
 require 'vendor/autoload.php';
+require 'config.php';
+
 use Mysendingbox\MysendingboxClient;
 
-$apiKey = 'YOUR_API_KEY';
+$apiKey = 'API_KEY';
 
 $mysendingbox = new MysendingboxClient($apiKey);
 
