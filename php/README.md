@@ -23,7 +23,7 @@ define('API_KEY', 'YOUR_API_KEY');
 ## Letters 
 #### Create a new Letter
 
-update __create_letter.php__ file and go to url /create_letter.php to see the object output
+update __create_letter.php__ and execute the file to see the object output
 
 you can edit $to_adress variable with your values
 
@@ -53,7 +53,7 @@ $letter = $mysendingbox->createPaperLetter(
 ```
 
 #### create electronic letter
-update __create_letter_electronic.php__ file and go to url /create_letter_electronic.php to see the object output
+update __create_letter_electronic.php__ and execute the file to see the object output
 
 you can edit the __AddressElectronic__ object with your values
 
@@ -172,16 +172,71 @@ The __create_account.php__ file shows you how to create an account
 
 ```php
 //File: create_account.php
-$account_response = $mysendingbox->createAccount(
-    'john.doe@example.com', // $email
-    'John Doe', // $name
-    '+336666666', // $phone
-    null, // $webhookUrl (optional)
-    'My Company name', // $companyName (optional)
-    '105 rue Gambetta', // $addressLine1 (optional)
-    null, // $addressLine2 (optional)
-    '69007', // $addressPostalcode (optional)
-    'Lyon', // $addressCity (optional)
-    'France' // $addressCountry (optional)
-);
+<?php
+require 'vendor/autoload.php';
+require 'config.php';
+
+use Mysendingbox\MysendingboxClient;
+
+$mysendingbox = new MysendingboxClient(API_KEY);
+
+// public function createAccount(
+//     string $email,
+//     string $name,
+//     ?string $phone = null,
+//     ?string $webhookUrl = null,
+//     ?string $companyName = null,
+//     ?string $addressLine1 = null,
+//     ?string $addressLine2 = null,
+//     ?string $addressPostalcode = null,
+//     ?string $addressCity = null,
+//     ?string $addressCountry = null,
+//     ?string $siren = null,
+//     ?int $cancellationWindow = null
+// )
+
+try {
+    $account_response = $mysendingbox->createAccount(
+        'john.doe@example.com', // $email
+        'John Doe', // $name 
+    );
+    echo '<pre>';
+    var_dump($account_response);
+    echo '</pre>';
+    
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n" , 'Code: ', $e->getCode(), "\n";
+}
+
+?>
+```
+
+#### Update an account
+
+The __update_account.php__ file shows how to update an account
+
+You might change **'ACCOUNT_ID'** by the ID of the account to update
+```php
+// File: update_account.php
+<?php
+require 'vendor/autoload.php';
+require 'config.php';
+
+use Mysendingbox\MysendingboxClient;
+
+$mysendingbox = new MysendingboxClient(API_KEY);
+
+$accountId = 'ACCOUNT_ID'; // Replace 'ACCOUNT_ID' with the ID of the account you want to update
+
+try {
+    $account_response = $mysendingbox->updateAccount( $accountId, 'newEmail@email.com');
+    echo '<pre>';
+    var_dump($account_response);
+    echo '</pre>';
+}
+catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n" , 'Code: ', $e->getCode(), "\n";
+}
+
+?>
 ```

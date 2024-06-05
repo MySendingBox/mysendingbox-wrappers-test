@@ -21,19 +21,17 @@ $mysendingbox = new MysendingboxClient(API_KEY);
 //     ?int $cancellationWindow = null
 // )
 
-$account_response = $mysendingbox->createAccount(
-    'john.doe@example.com', // $email
-    'John Doe', // $name
-    '+336666666', // $phone
-    null, // $webhookUrl (optional)
-    'My Company name', // $companyName (optional)
-    '105 rue Gambetta', // $addressLine1 (optional)
-    null, // $addressLine2 (optional)
-    '69007', // $addressPostalcode (optional)
-    'Lyon', // $addressCity (optional)
-    'France' // $addressCountry (optional)
-);
-
-print_r($account_response);
+try {
+    $account_response = $mysendingbox->createAccount(
+        'john.doe@example.com', // $email
+        'John Doe', // $name 
+    );
+    echo '<pre>';
+    var_dump($account_response);
+    echo '</pre>';
+    
+} catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n" , 'Code: ', $e->getCode(), "\n";
+}
 
 ?>

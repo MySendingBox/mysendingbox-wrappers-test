@@ -10,9 +10,9 @@ $accountId = 'ACCOUNT_ID'; // Replace 'ACCOUNT_ID' with the ID of the account yo
 
 try {
     $account_response = $mysendingbox->updateAccount( $accountId, 'newEmail@email.com');
-    echo '<pre>';
-    var_dump($account_response);
-    echo '</pre>';
+    
+    var_dump($account_response); // the output is a boolean 
+    
 }
 catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n" , 'Code: ', $e->getCode(), "\n";
