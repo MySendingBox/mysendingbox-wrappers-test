@@ -8,12 +8,12 @@ The recommended way to install the project example is through [Composer](http://
 // Install Composer
 curl -sS https://getcomposer.org/installer | php
 
-// Add Mysendingbox.fr PHP client as a dependency
+// install dependencies
 composer.phar install
 ```
 
 After installing, you will need to update config.php file.
-Change 'YOUR_API-KEY' by your api keys
+Change 'YOUR_API_KEY' by your api keys
 
 
 ```bash
