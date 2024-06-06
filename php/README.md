@@ -91,7 +91,7 @@ $letter = $mysendingbox->createElectronicLetter(
 );
 ```
 
-#### Retrieve a Letter
+#### Retrieve a specific Letter
 
 The __get_letter.php__ file shows you an example of how to retrieve a letter. 
 
@@ -125,7 +125,7 @@ Replace 'INVOICE_ID' by the ID of the invoice to retrieve
 ```php
 <?php
 //File: get_invoice.php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require 'config.php';
 
 use Mysendingbox\MysendingboxClient;
@@ -149,7 +149,7 @@ You can upadte getAllInvoices with relevant arguments such as 'created_at','offs
 ```php
 //File: get_all_invoices.php
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require 'config.php';
 
 use Mysendingbox\MysendingboxClient;
@@ -173,7 +173,7 @@ The __create_account.php__ file shows you how to create an account
 ```php
 //File: create_account.php
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require 'config.php';
 
 use Mysendingbox\MysendingboxClient;
@@ -219,7 +219,7 @@ You might change **'ACCOUNT_ID'** by the ID of the account to update
 ```php
 // File: update_account.php
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require 'config.php';
 
 use Mysendingbox\MysendingboxClient;
