@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": "^7.4",
+        "mysendingbox/mysendingbox-php": "^0.3.2"
+      }
+}
